@@ -9,7 +9,6 @@ import ProLayout, {
   Settings,
   DefaultFooter,
 } from '@ant-design/pro-layout';
-import { formatMessage } from 'umi-plugin-react/locale';
 import React, { useEffect } from 'react';
 import { Link } from 'umi';
 import { Dispatch } from 'redux';
@@ -150,7 +149,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   return (
     <ProLayout
       logo={logo}
-      formatMessage={formatMessage}
       menuHeaderRender={(logoDom, titleDom) => (
         <Link to="/">
           {logoDom}
@@ -185,6 +183,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       rightContentRender={() => <RightContent />}
       {...props}
       {...settings}
+      title="New Balance"
     >
       <Authorized authority={authorized!.authority} noMatch={noMatch}>
         {children}

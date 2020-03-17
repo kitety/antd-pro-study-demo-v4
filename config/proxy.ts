@@ -7,10 +7,10 @@
  */
 export default {
   dev: {
-    '/api/': {
-      target: 'https://preview.pro.ant.design',
+    '/api': {
+      target: 'http://staging.qiuzhi99.com ',
       changeOrigin: true,
-      pathRewrite: { '^': '' },
+      pathRewrite: { '^/api': '/api/v1' },
     },
   },
   test: {
